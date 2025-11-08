@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comics - Book Enclave</title>
+    <style>
+        body {
+            background-color: #030712;
+            color: #fff;
+            font-family: sans-serif;
+            margin: 0;
+            padding-top: 5rem;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .book-cover {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+            border-radius: 1rem; 
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); 
+            background-color: #1f2937;
+        }
+        .book-cover:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
+        }
+        .book-cover img {
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+        background-color: #111827;
+        display: block;
+        }
+
+        .book-title {
+            text-align: center;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.75rem 0.25rem;
+            background-color: #111827;
+            border-top: 1px solid #374151;
+        }
+        .main-header {
+            background-color: #111827;
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        .header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: red;
+        }
+        .header-title {
+            font-size: 1.875rem;
+            font-weight: 800;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .nav-link {
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #9ca3af;
+        }
+        .category-select {
+            background-color: #1f2937;
+            color: #fff;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
+        .category-select:hover {
+            background-color: #374151;
+        }
+        .main-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 6rem 1rem 2rem 1rem;
+        }
+        .main-heading {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
+        .book-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        @media (min-width: 640px) {
+            .book-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        @media (min-width: 768px) {
+            .book-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+        @media (min-width: 1024px) {
+            .book-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="header-title">Book Enclave</h1>
+            <nav class="nav-links">
+                <a href="bookenclave.html" class="nav-link">Home</a>
+                <div class="dropdown-container">
+                    <select id="category-dropdown" onchange="navigateToPage(this)" class="category-select">
+                        <option value="">--Choose-genre--</option>
+                        <option value="horror.html">Horror</option>
+                        <option value="comedy.html">Comedy</option>
+                        <option value="adventure.html">Adventure</option>
+                        <option value="puzzles.html">Puzzles</option>
+                        <option value="selfhelp.html">Self Help</option>
+                        <option value="competitive.html">Competitive</option>
+                        <option value="comics.html">Comics</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="main-content">
+        <h1 class="main-heading">Self-Help</h1>
+        <div class="book-grid">
+            <a href="selfhelp1.html" class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/71sBtM3Yi5L.AC_UY327_FMwebp_QL65.jpg" alt="The Power of Subconsious Mind">
+                <div class="book-title">The Power of Subconsious Mind</div>
+            </a>
+            <a href="selfhelp2.html" class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/81yD-wxYDsL.AC_UY327_FMwebp_QL65.jpg" alt="Wisdom Takes Work">
+                <div class="book-title">Wisdom Takes Work</div>
+            </a>
+            <a href="selfhelp3.html" class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/71Q2fXtMhaL.AC_UY327_FMwebp_QL65.jpg" alt="Dopamine Detox">
+                <div class="book-title">Dopamine Detox</div>
+            </a>
+            <a href="selfhelp4.html" class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/715qi-cIbML.AC_UY327_FMwebp_QL65.jpg" alt="Don't Believe Everything You Think">
+                <div class="book-title">Don't Believe Everything You Think</div>
+            </a>
+            <a href="selfhelp5.html" class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/61s3bXsYrPL.AC_UY327_FMwebp_QL65.jpg" alt="Enter Your OTP">
+                <div class="book-title">Enter Your OTP</div>
+            </a>
+            <a href="selfhelp6.html" class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/71pEaSYkhsL.AC_UY327_FMwebp_QL65.jpg" alt="The Art Of Letting Go">
+                <div class="book-title">The Art Of Letting Go</div>
+            </a>
+            <a href="selfhelp7.html" class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/61xivWmExiL.AC_UY327_FMwebp_QL65.jpg" alt="The Mountain Is You">
+                <div class="book-title">The Mountain Is You</div>
+            </a>
+             <a href="selfhelp8.html" class="book-cover" style="background-color: #1f2937;">
+                <img src="https://m.media-amazon.com/images/I/5154NSv1IaL.AC_UY327_FMwebp_QL65.jpg" alt="Harness The Power Of Mindset">
+                <div class="book-title">Harness The Power Of Mindset</div>
+            </a>
+            <a href="selfhelp9.html" class="book-cover" style="background-color: #1f2937;">
+                <img src="https://m.media-amazon.com/images/I/81l3rZK4lnL.AC_UY327_FMwebp_QL65.jpg" alt="Ikigai">
+                <div class="book-title">Ikigai</div>
+            </a>
+            <a href="selfhelp10.html" class="book-cover" style="background-color: #1f2937;">
+                <img src="https://m.media-amazon.com/images/I/71iyoGwTfBL.AC_UY327_FMwebp_QL65.jpg" alt="Rewrite Your Anxious Brain">
+                <div class="book-title">Rewrite Your Anxious Brain</div>
+            </a>
+            <a href="selfhelp11.html" class="book-cover" style="background-color: #1f2937;">
+                <img src="https://m.media-amazon.com/images/I/81F90H7hnML.AC_UY327_FMwebp_QL65.jpg" alt="Atomic Habits">
+                <div class="book-title">Atomic Habits</div>
+            </a>
+    </div>
+    
+    <script>
+        function navigateToPage(selectElement) {
+            const value = selectElement.value;
+            if (value) {
+                window.location.href = value;
+            }
+        }
+    </script>
+</body>
+</html>

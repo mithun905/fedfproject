@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comics - Book Enclave</title>
+    <style>
+        body {
+            background-color: #030712;
+            color: #fff;
+            font-family: sans-serif;
+            margin: 0;
+            padding-top: 5rem;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .book-cover {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+            border-radius: 1rem; 
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); 
+            background-color: #1f2937;
+        }
+        .book-cover:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
+        }
+        .book-cover img {
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+        background-color: #111827;
+        display: block;
+        }
+
+        .book-title {
+            text-align: center;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.75rem 0.25rem;
+            background-color: #111827;
+            border-top: 1px solid #374151;
+        }
+        .main-header {
+            background-color: #111827;
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        .header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: red;
+        }
+        .header-title {
+            font-size: 1.875rem;
+            font-weight: 800;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .nav-link {
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #9ca3af;
+        }
+        .category-select {
+            background-color: #1f2937;
+            color: #fff;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
+        .category-select:hover {
+            background-color: #374151;
+        }
+        .main-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 6rem 1rem 2rem 1rem;
+        }
+        .main-heading {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
+        .book-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        @media (min-width: 640px) {
+            .book-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        @media (min-width: 768px) {
+            .book-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+        @media (min-width: 1024px) {
+            .book-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="header-title">Book Enclave</h1>
+            <nav class="nav-links">
+                <a href="bookenclave.html" class="nav-link">Home</a>
+                <div class="dropdown-container">
+                    <select id="category-dropdown" onchange="navigateToPage(this)" class="category-select">
+                        <option value="">--Choose-genre--</option>
+                        <option value="horror.html">Horror</option>
+                        <option value="comedy.html">Comedy</option>
+                        <option value="adventure.html">Adventure</option>
+                        <option value="puzzles.html">Puzzles</option>
+                        <option value="selfhelp.html">Self Help</option>
+                        <option value="competitive.html">Competitive</option>
+                        <option value="comics.html">Comics</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="main-content">
+        <h1 class="main-heading">Competitive</h1>
+        <div class="book-grid">
+            <a href="competitive1.html" class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/81WnvzEVwGL.AC_UY327_FMwebp_QL65.jpg" alt="Quantitative Aptitude">
+                <div class="book-title">Quantitative Aptitude</div>
+            </a>
+            <a href="competitive2.html" class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/61Az2V2YGcL.AC_UY327_FMwebp_QL65.jpg" alt="General Knowledge">
+                <div class="book-title">General Knowledge 2026</div>
+            </a>
+            <a href="competitive3.html" class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/81jfw3LGtcL.AC_UY327_FMwebp_QL65.jpg" alt="NCERT Summary for UPSC and State PSC">
+                <div class="book-title">NCERT Summary for UPSC and State PSC</div>
+            </a>
+            <a href="competitive4.html" class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/81IFTZKQ1BL.AC_UY327_FMwebp_QL65.jpg" alt="Computer Awareness">
+                <div class="book-title">Computer Awareness</div>
+            </a>
+            <a href="competitive5.html" class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/813aQJDZ2gL.AC_UY327_FMwebp_QL65.jpg" alt="Logical Reasoning">
+                <div class="book-title">Logical Reasoning</div>
+            </a>
+            <a href="competitive6.html" class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/61QdV4sYJvL.AC_UY327_FMwebp_QL65.jpg" alt="Maths CGL Warrior">
+                <div class="book-title">Maths CGL Warrior</div>
+            </a>
+            <a href="competitive7.html" class="book-cover">
+                <img src="https://m.media-amazon.com/images/I/61pgmX2oqJL.AC_UY327_FMwebp_QL65.jpg" alt="General English">
+                <div class="book-title">General English</div>
+            </a>
+             <a href="competitive8.html" class="book-cover" style="background-color: #1f2937;">
+                <img src="https://m.media-amazon.com/images/I/61OsUjXvfqL.AC_UY327_FMwebp_QL65.jpg" alt="English For Competitive Exams">
+                <div class="book-title">English For Competitive Exams</div>
+            </a>
+            <a href="competitive9.html" class="book-cover" style="background-color: #1f2937;">
+                <img src="https://m.media-amazon.com/images/I/81na7a3-GfL.AC_UY327_FMwebp_QL65.jpg" alt="NCERT General Science">
+                <div class="book-title">NCERT General Science</div>
+            </a>
+            <a href="competitive10.html" class="book-cover" style="background-color: #1f2937;">
+                <img src="https://m.media-amazon.com/images/I/81V6t1UMENL.AC_UY327_FMwebp_QL65.jpg" alt="NCERT One For All for UPSC">
+                <div class="book-title">NCERT One For All for UPSC</div>
+            </a>
+            <a href="competitive11.html" class="book-cover" style="background-color: #1f2937;">
+                <img src="https://m.media-amazon.com/images/I/81gQrCBbTRL.AC_UY327_FMwebp_QL65.jpg" alt="Samundramanthan of Volcabulary">
+                <div class="book-title">Samundramanthan of Volcabulary</div>
+            </a>
+    </div>
+    
+    <script>
+        function navigateToPage(selectElement) {
+            const value = selectElement.value;
+            if (value) {
+                window.location.href = value;
+            }
+        }
+    </script>
+</body>
+</html>

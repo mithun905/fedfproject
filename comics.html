@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comics - Book Enclave</title>
+    <style>
+        body {
+            background-color: #030712;
+            color: #fff;
+            font-family: sans-serif;
+            margin: 0;
+            padding-top: 5rem;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .book-cover {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+            border-radius: 1rem; 
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); 
+            background-color: #1f2937;
+        }
+        .book-cover:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
+        }
+        .book-cover img {
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+        background-color: #111827;
+        display: block;
+        }
+
+        .book-title {
+            text-align: center;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.75rem 0.25rem;
+            background-color: #111827;
+            border-top: 1px solid #374151;
+        }
+        .main-header {
+            background-color: #111827;
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        .header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: red;
+        }
+        .header-title {
+            font-size: 1.875rem;
+            font-weight: 800;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .nav-link {
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #9ca3af;
+        }
+        .category-select {
+            background-color: #1f2937;
+            color: #fff;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
+        .category-select:hover {
+            background-color: #374151;
+        }
+        .main-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 6rem 1rem 2rem 1rem;
+        }
+        .main-heading {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
+        .book-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        @media (min-width: 640px) {
+            .book-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        @media (min-width: 768px) {
+            .book-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+        @media (min-width: 1024px) {
+            .book-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="header-title">Book Enclave</h1>
+            <nav class="nav-links">
+                <a href="bookenclave.html" class="nav-link">Home</a>
+                <div class="dropdown-container">
+                    <select id="category-dropdown" onchange="navigateToPage(this)" class="category-select">
+                        <option value="">--Choose-genre--</option>
+                        <option value="horror.html">Horror</option>
+                        <option value="comedy.html">Comedy</option>
+                        <option value="adventure.html">Adventure</option>
+                        <option value="puzzles.html">Puzzles</option>
+                        <option value="selfhelp.html">Self Help</option>
+                        <option value="competitive.html">Competitive</option>
+                        <option value="comics.html">Comics</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="main-content">
+        <h1 class="main-heading">Comics</h1>
+        <div class="book-grid">
+            <a href="#" class="book-cover">
+                <img src="https://rukminim2.flixcart.com/image/480/480/xif0q/book/a/u/l/avengers-100-collectible-comic-book-cover-postcards-original-imagmfd8rbc5shjj.jpeg?q=90" alt=
+                "Avengers Comic Cover">
+                <div class="book-title">Avengers</div>
+            </a>
+            <a href="#" class="book-cover">
+                <img src="https://i.pinimg.com/736x/b1/49/ef/b149ef5a966c23eba98f41e196a919bc.jpg" alt="daredevil">
+                <div class="book-title">daredevil</div>
+            </a>
+            <a href="#" class="book-cover">
+                <img src="https://i.pinimg.com/1200x/97/80/2b/97802b164deafc79f467f70e06c14ce0.jpg" alt="ironman">
+                <div class="book-title">ironman</div>
+            </a>
+            <a href="#" class="book-cover">
+                <img src="https://i.pinimg.com/736x/34/53/02/345302e599ffc6bd72c98fa5c606bad4.jpg" alt="blackpanther">
+                <div class="book-title">blackpanther</div>
+            </a>
+            <a href="#" class="book-cover">
+                <img src="http://i.pinimg.com/736x/0a/92/6d/0a926dd6d0ba435d172c9471c2ba07cb.jpg" alt="wakanda">
+                <div class="book-title">wakanda</div>
+            </a>
+            <a href="#" class="book-cover">
+                <img src="https://i.pinimg.com/1200x/22/50/92/225092c335098ac1d104e7949dbae7bd.jpg" alt="thor">
+                <div class="book-title">thor</div>
+            </a>
+            <a href="#" class="book-cover">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiFGerR1UN8Md1WQU1XwCAtyWp60ER91F9lw&s" alt="allfunny">
+                <div class="book-title">all funny</div>
+            </a>
+            <a href="#" class="book-cover">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxqgukH6If6QN6_CmJzkAP8wiLrom4IEG7F36iQGv2dYieJu6UAYSrLo5CwRsSnKGZXNU&usqp=CAU" alt="Ghost World Comic Cover">
+                <div class="book-title">new comics</div>
+            </a>
+            <a href="#" class="book-cover" style="background-color: #1f2937;">
+                <img src="https://media.mycomicshop.com/n_iv/600/726835.jpg" alt="pep">
+                <div class="book-title">pepcomics</div>
+            </a>
+            <a href="#" class="book-cover" style="background-color: #1f2937;">
+                <img src="https://box01.comicbookplus.com/viewer/65/6534288ba26934b06590825aa0477040/0.jpg" alt="funny pages">
+                <div class="book-title">funny pages</div>
+            </a>
+            <a href="#" class="book-cover" style="background-color: #1f2937;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW-zUszTMh1H57sTgE52TydY4v5bzJm5Z7TnCfovWaqAQkVRJ7OpQU-G1d2lTENl7XOV0&usqp=CAU" alt="features">
+                <div class="book-title">features</div>
+            </a>
+            <a href="#" class="book-cover" style="background-color: #1f2937;">
+                <img src="https://storage.googleapis.com/hipcomic/p/1600be69ff217a66133e0ddd1122f72a-800.jpg" alt="Comics Book Cover">
+                <div class="book-title">laugh</div>
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        function navigateToPage(selectElement) {
+            const value = selectElement.value;
+            if (value) {
+                window.location.href = value;
+            }
+        }
+    </script>
+</body>
+</html>

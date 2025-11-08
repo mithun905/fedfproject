@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Book Enclave</title>
+    <style>
+        body {
+            background-color: #030712;
+            color: #fff;
+            font-family: sans-serif;
+            margin: 0;
+            padding-top: 5rem;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .book-cover {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+            border-radius: 1rem; 
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); 
+            background-color: #1f2937;
+        }
+        .book-cover:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
+        }
+        .book-cover img {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            background-color: #111827;
+            display: block;
+        }
+
+        .book-title {
+            text-align: center;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.75rem 0.25rem;
+            background-color: #111827;
+            border-top: 1px solid #374151;
+        }
+        .main-header {
+            background-color: #111827;
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        .header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: red;
+        }
+        .header-title {
+            font-size: 1.875rem;
+            font-weight: 800;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .nav-link {
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #9ca3af;
+        }
+        .category-select {
+            background-color: #1f2937;
+            color: #fff;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
+        .category-select:hover {
+            background-color: #374151;
+        }
+        .main-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 6rem 1rem 2rem 1rem;
+        }
+        .main-heading {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
+        .book-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        @media (min-width: 640px) {
+            .book-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        @media (min-width: 768px) {
+            .book-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+        @media (min-width: 1024px) {
+            .book-grid {
+                grid-template-columns: repeat(5, minmax(0, 1fr));
+            }
+        }
+    </style>
+    
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="header-title">Book Enclave</h1>
+            <nav class="nav-links">
+                <a href="bookenclave.html" class="nav-link">Home</a>
+                <div class="dropdown-container">
+                    <select id="category-dropdown" onchange="navigateToPage(this)" class="category-select">
+                        <option value="">--Choose-genre--</option>
+                        <option value="horror.html">Horror</option>
+                        <option value="comedy.html">Comedy</option>
+                        <option value="adventure.html">Adventure</option>
+                        <option value="puzzles.html">Puzzles</option>
+                        <option value="selfhelp.html">Self Help</option>
+                        <option value="competitive.html">Competitive</option>
+                        <option value="comics.html">Comics</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <h1 class="main-heading"style="color: gold;">Top Picks</h1>
+        <h2>Horror</h2>
+        <div class="book-grid">
+           <a href="horror2.html" class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/91YWt2jiowL.SL1500.jpg" alt="The Stand Stephen King">
+    <div class="book-title">The Stand Stephen King</div>
+</a>
+
+<a href="horror4.html" class="book-cover">
+    <img src="https://th.bing.com/th/id/R.6a71e1456acc2d3bab60c5ffc2852567?rik=qghb0TIQyBA6lQ&riu=http%3a%2f%2fprodimage.images-bn.com%2fpimages%2f9780385528221_p0_v2_s1200x630.jpg&ehk=gnamhu0PAa02MEok85KpIqCOA2KSnVsjc7EHzuVPl%2fg%3d&risl=&pid=ImgRaw&r=0" alt="Stephen King">
+    <div class="book-title">Stephen King</div>
+</a>
+
+<a href="horror6.html" class="book-cover">
+    <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781982110574/the-institute-9781982110574_xlg.jpg" alt="The Institute Stephen King">
+    <div class="book-title">The Institute Stephen King</div>
+</a>
+
+<a href="horror8.html" class="book-cover">
+    <img src="https://www.literaryladiesguide.com/wp-content/uploads/2019/04/Haunting-of-hill-house.jpg" alt="The Haunting of Hill House">
+    <div class="book-title">The Haunting of Hill House</div>
+</a>
+
+<a href="horror10.html" class="book-cover">
+    <img src="https://images.gr-assets.com/books/1389762449l/34084.jpg" alt="The Waste Lands">
+    <div class="book-title">The Waste Lands</div>
+</a>
+
+        </div>
+        <h2>Comedy</h2>
+        <div class="book-grid">
+           <a href="comedy2.html" class="book-cover">
+    <img src="https://www.thebookshop.es/productimages/1200/good-omens---neil-gaiman---terry-pratchett_112499.jpg" alt="daredevil">
+    <div class="book-title">Good Omens by Neil Gaiman & Terry Pratchett</div>
+</a>
+
+<a href="comedy4.html" class="book-cover">
+    <img src="https://imgv2-2-f.scribdassets.com/img/word_document/216913835/original/52385b1026/1585228629?v=1" alt="blackpanther">
+    <div class="book-title">The Rosie Project by Graeme Simsion</div>
+</a>
+
+<a href="comedy6.html" class="book-cover">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.L8aD52d0TDEmhJCr5hIXRAHaLQ?rs=1&pid=ImgDetMain&o=7&rm=3" alt="thor">
+    <div class="book-title">Furiously Happy by Jenny Lawson</div>
+</a>
+
+<a href="comedy8.html" class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/81vVYM9dlcL.jpg" alt="Ghost World Comic Cover">
+    <div class="book-title">A Confederacy of Dunces by John Kennedy Toole</div>
+</a>
+
+<a href="comedy10.html" class="book-cover" style="background-color: #1f2937;">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.4BNlwbZXcC6ZRcgOzOR4ywHaLb?rs=1&pid=ImgDetMain&o=7&rm=3" alt="funny pages">
+    <div class="book-title">The Secret Diary of Adrian Mole, Aged 13¾ by Sue</div>
+</a>
+
+        </div>
+
+        <h2>Adventure</h2>
+<div class="book-grid">
+    <a href="adventure2.html" class="book-cover">
+        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546071216l/5907.jpg" alt="The Hobbit, or There and Back Again">
+        <div class="book-title">The Hobbit, or There and Back Again</div>
+    </a>
+
+    <a href="adventure4.html" class="book-cover">
+        <img src="https://d3525k1ryd2155.cloudfront.net/h/466/736/834736466.0.x.jpg" alt="Treasure Island Robert Louis Stevenson">
+        <div class="book-title">Treasure Island Robert Louis Stevenson</div>
+    </a>
+
+    <a href="adventure6.html" class="book-cover">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.MdpuEFN5u00vixdi_yobMwAAAA?w=400&h=631&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Dune Frank Herbert">
+        <div class="book-title">Dune Frank Herbert</div>
+    </a>
+
+    <a href="adventure8.html" class="book-cover">
+        <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1358752155i/16693100.jpg" alt="Kidnapped, Rob Lloyd Jones">
+        <div class="book-title">Kidnapped, Rob Lloyd Jones</div>
+    </a>
+
+    <a href="adventure10.html" class="book-cover">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.lNGE8b3lvfBbEuBCOFSGywHaLp?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Outlander Diana Gabaldon">
+        <div class="book-title">Outlander Diana Gabaldon</div>
+    </a>
+</div>
+
+<h2>Puzzles</h2>
+<div class="book-grid">
+    <a href="puzzles2.html" class="book-cover">
+        <img src="https://images.openai.com/thumbnails/url/tEBrCHicDclZCoJAAADQE6lji6QQobklVCSG5E-Y4zKiszijjR6ku3Wber_v-2mEoNzStBIXw0xFCRXxwkCtucgFKtSC9BpvCKUI1we2_59lX6AZFPE4gi7QMze_E2_SHUmOu1avkjdIs9GbSwgriTvbiNrnzJK1KUOcRtuz24R97DK6XE--zaZqxdMFAUMam8FfwEO5NchDzvQDxGo2Tg" 
+             alt="The Researchers First Murder">
+        <div class="book-title">The Researchers First Murder</div>
+    </a>
+
+    <a href="puzzles4.html" class="book-cover">
+        <img src="https://images.openai.com/static-rsc-1/j9VhH6YoFHlVnaDRkyZ9KHfCFDnt_ihHam2vtX1HR9FnqM4SsCM03zsPYGxB7gtkb-xJkIfCuxCGT35pXGTNw2ulySnaj8qXUqJ-RtM_RGl_D-nM8ZgW4UtaK-s63W6Rom1KHO2cUcxFr8JmuxtcPSi3Tzt75DeNMscsYLtbm8nEMt4_imQahAemCVgilv56zZkHQ3m-H7zeB9eCHyG7uSFfpf12xNb02Hm-DvbmHWHK-Euc7HUd2tsx9M20T-I2" 
+             alt="Puzzle Books For Adults">
+        <div class="book-title">Puzzle Books for Adults</div>
+    </a>
+
+    <a href="puzzles6.html" class="book-cover">
+        <img src="https://images.openai.com/thumbnails/url/Mk32SXicDclZDkNAAADQEw0VVEiahlhKExWq1U_GMGobZqyH6n16m_b9vu8HM0aoxvOog-NGGMoByzqBKylLWQU52Lc8xT0hVVeeh9P_NN3PVQfeVwu5Td6PIl6EWm723QpL7MXFMZCSENu6Fxm1mk2KabT2_F6dsH_EaQEOTApoebtE82DIMbyKvjswBMmUtP4zj2UdKchUG8GqPJGg-bVsxG63IgPAH6b6B1IEPtg" 
+             alt="Crossword Puzzles Book-1">
+        <div class="book-title">Crossword Puzzles Book-1</div>
+    </a>
+
+    <a href="puzzles8.html" class="book-cover">
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTlXfnBXpKri7bwxZ51jCrm1URmT-i3EmmpteHBcO_Xgd2hF_KGMQnkNLFzQfRsdkFNLBQ9Co60cPafxGZkBidpldjkSCVh7j56J3Uv2mE6X7fLT3eh6zJu" 
+             alt="The Great Book of Puzzles and Teasers">
+        <div class="book-title">The Great Book of Puzzles and Teasers</div>
+    </a>
+
+    <a href="puzzles10.html" class="book-cover">
+        <img src="https://m.media-amazon.com/images/I/71TpVz1TGXL.AC_UY327_FMwebp_QL65.jpg" 
+             alt="The Su Doku Challenge One">
+        <div class="book-title">The Su Doku Challenge One</div>
+    </a>
+</div>
+
+
+        <h2>Self Help</h2>
+        <div class="book-grid">
+            <a href="selfhelp2.html" class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/81yD-wxYDsL.AC_UY327_FMwebp_QL65.jpg" alt="Wisdom Takes Work">
+    <div class="book-title">Wisdom Takes Work</div>
+</a>
+
+<a href="selfhelp4.html" class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/715qi-cIbML.AC_UY327_FMwebp_QL65.jpg" alt="Don't Believe Everything You Think">
+    <div class="book-title">Don't Believe Everything You Think</div>
+</a>
+
+<a href="selfhelp6.html" class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/71pEaSYkhsL.AC_UY327_FMwebp_QL65.jpg" alt="The Art Of Letting Go">
+    <div class="book-title">The Art Of Letting Go</div>
+</a>
+
+<a href="selfhelp8.html" class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/5154NSv1IaL.AC_UY327_FMwebp_QL65.jpg" alt="Harness The Power Of Mindset">
+    <div class="book-title">Harness The Power Of Mindset</div>
+</a>
+
+<a href="selfhelp10.html" class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/71iyoGwTfBL.AC_UY327_FMwebp_QL65.jpg" alt="Rewrite Your Anxious Brain">
+    <div class="book-title">Rewrite Your Anxious Brain</div>
+</a>
+
+        </div>
+
+        
+        <h2>Competitive</h2>
+        <div class="book-grid">
+            <a href="competitive2.html" class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/61Az2V2YGcL.AC_UY327_FMwebp_QL65.jpg" alt="General Knowledge">
+    <div class="book-title">General Knowledge 2026</div>
+</a>
+
+<a href="competitive4.html" class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/81IFTZKQ1BL.AC_UY327_FMwebp_QL65.jpg" alt="Computer Awareness">
+    <div class="book-title">Computer Awareness</div>
+</a>
+
+<a href="competitive6.html" class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/61QdV4sYJvL.AC_UY327_FMwebp_QL65.jpg" alt="Maths CGL Warrior">
+    <div class="book-title">Maths CGL Warrior</div>
+</a>
+
+<a href="competitive8.html" class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/61OsUjXvfqL.AC_UY327_FMwebp_QL65.jpg" alt="English For Competitive Exams">
+    <div class="book-title">English For Competitive Exams</div>
+</a>
+
+<a href="competitive10.html" class="book-cover">
+    <img src="https://m.media-amazon.com/images/I/81V6t1UMENL.AC_UY327_FMwebp_QL65.jpg" alt="NCERT One For All for UPSC">
+    <div class="book-title">NCERT One For All for UPSC</div>
+</a>
+
+        </div>
+
+    </div>
+
+    <script>
+        function navigateToPage(selectElement) {
+            const value = selectElement.value;
+            if (value) {
+                window.location.href = value;
+            }
+        }
+    </script>
+</body>
+</html>

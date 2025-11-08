@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comics - Book Enclave</title>
+    <style>
+        body {
+            background-color: #030712;
+            color: #fff;
+            font-family: sans-serif;
+            margin: 0;
+            padding-top: 5rem;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .book-cover {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+            border-radius: 1rem; 
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); 
+            background-color: #1f2937;
+        }
+        .book-cover:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
+        }
+        .book-cover img {
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+        background-color: #111827;
+        display: block;
+        }
+
+        .book-title {
+            text-align: center;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.75rem 0.25rem;
+            background-color: #111827;
+            border-top: 1px solid #374151;
+        }
+        .main-header {
+            background-color: #111827;
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        .header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: red;
+        }
+        .header-title {
+            font-size: 1.875rem;
+            font-weight: 800;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .nav-link {
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #9ca3af;
+        }
+        .category-select {
+            background-color: #1f2937;
+            color: #fff;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
+        .category-select:hover {
+            background-color: #374151;
+        }
+        .main-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 6rem 1rem 2rem 1rem;
+        }
+        .main-heading {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
+        .book-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        @media (min-width: 640px) {
+            .book-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        @media (min-width: 768px) {
+            .book-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+        @media (min-width: 1024px) {
+            .book-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="header-title">Book Enclave</h1>
+            <nav class="nav-links">
+                <a href="bookenclave.html" class="nav-link">Home</a>
+                <div class="dropdown-container">
+                    <select id="category-dropdown" onchange="navigateToPage(this)" class="category-select">
+                        <option value="">--Choose-genre--</option>
+                        <option value="horror.html">Horror</option>
+                        <option value="comedy.html">Comedy</option>
+                        <option value="adventure.html">Adventure</option>
+                        <option value="puzzles.html">Puzzles</option>
+                        <option value="selfhelp.html">Self Help</option>
+                        <option value="competitive.html">Competitive</option>
+                        <option value="comics.html">Comics</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="main-content">
+        <h1 class="main-heading">Puzzles</h1>
+        <div class="book-grid">
+            <a href="puzzles1.html" class="book-cover">
+                <img src=https://images.openai.com/static-rsc-1/nH-suZYlBtqgYjJXFLq_u8exvX6TD-nH7f-MZpZ5xTgNbgHsgWBOVLhFD4dMxQ_ggv2l6kgIQdExTU1mEF7mX2ND8TLvmvD4fDMKgn5M9pqNiLo8L5MT7RJBhqoQguKGv9CEVhdNBNSz9--OJ_zcxONcQgkvjsuNHnb8YYlCWTVRDbS9JGDS3z_-O1dbZqUnMeIvYiPlAxt_9kG3-kZQ3phj5ZNaGi_d0fl4Ius0RHavpRGUoCvHFEaa15_WW8i9 alt="Cains Jaxbone">
+                <div class="book-title">Cain's Jawbone</div>
+            </a>
+            <a href="puzzles2.html" class="book-cover">
+                <img src=https://images.openai.com/thumbnails/url/tEBrCHicDclZCoJAAADQE6lji6QQobklVCSG5E-Y4zKiszijjR6ku3Wber_v-2mEoNzStBIXw0xFCRXxwkCtucgFKtSC9BpvCKUI1we2_59lX6AZFPE4gi7QMze_E2_SHUmOu1avkjdIs9GbSwgriTvbiNrnzJK1KUOcRtuz24R97DK6XE--zaZqxdMFAUMam8FfwEO5NchDzvQDxGo2Tg alt="The Researchers First Murder">
+                <div class="book-title">The Researchers First Murder</div>
+            </a>
+            <a href="puzzles3.html" class="book-cover">
+                <img src="https://images.openai.com/thumbnails/url/fMhnEHicDclJDoIwAADAF7GKCZIYUxOLoEJFFORipAWKLAVag_Icf-VvdK7z_VAhOm4pStbi4d2JjEgibXW54OIuSixj1iicsq4r22LVL_9nAY8sbHyc0vUs3hKTjgei43Ego2_EwIwQ48A8hVia7yCEl2bTF3mxhxWo7MR55NIUId1wvaBmN5eoQPe4U5qqhtgEYPZCkx-er1WgPin1a0dLAuMHJ0w5BA" alt="The Best Puzzle Book for Adults">
+                <div class="book-title">The Best Puzzle Book for Adults</div>
+            </a>
+            <a href="puzzles4.html" class="book-cover">
+                <img src="https://images.openai.com/static-rsc-1/j9VhH6YoFHlVnaDRkyZ9KHfCFDnt_ihHam2vtX1HR9FnqM4SsCM03zsPYGxB7gtkb-xJkIfCuxCGT35pXGTNw2ulySnaj8qXUqJ-RtM_RGl_D-nM8ZgW4UtaK-s63W6Rom1KHO2cUcxFr8JmuxtcPSi3Tzt75DeNMscsYLtbm8nEMt4_imQahAemCVgilv56zZkHQ3m-H7zeB9eCHyG7uSFfpf12xNb02Hm-DvbmHWHK-Euc7HUd2tsx9M20T-I2" alt="Puzzle Books For Adults">
+                <div class="book-title">Puzzle Books for Adults</div>
+            </a>
+            <a href="puzzles5.html" class="book-cover">
+                <img src="https://images.openai.com/thumbnails/url/nhiQTXicDcn_DkJAAADgJ0JLEltrinHa_Fi4q38sR45yru6Et-p1epv6_v2-HyIE46aiVBS_ZiaqUhIFXco1F1fRYBn3ncJJz1hD691z-z_TCkrDxYl3IC0Fww0FbxS0CEJOPV-dVWvCPmyGJBucTQQwOTldgSEz8lYjZUFckKIRzGOi70GoBRHhoXuO9Czvm4nQxzgZ1n3Ow4V00SeohYCt7Jr2aH1Mx9ju4voH-gY_tQ" alt="Puzzle Buzz No.1">
+                <div class="book-title">Puzzle Buzz No.1</div>
+            </a>
+            <a href="puzzles6.html" class="book-cover">
+                <img src="https://images.openai.com/thumbnails/url/Mk32SXicDclZDkNAAADQEw0VVEiahlhKExWq1U_GMGobZqyH6n16m_b9vu8HM0aoxvOog-NGGMoByzqBKylLWQU52Lc8xT0hVVeeh9P_NN3PVQfeVwu5Td6PIl6EWm723QpL7MXFMZCSENu6Fxm1mk2KabT2_F6dsH_EaQEOTApoebtE82DIMbyKvjswBMmUtP4zj2UdKchUG8GqPJGg-bVsxG63IgPAH6b6B1IEPtg" alt="Crossword Puzzles Book-1">
+                <div class="book-title">Crossword Puzzles Book-1</div>
+            </a>
+            <a href="puzzles7.html" class="book-cover">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT26OFNiSsK5g7nwYXPfpczv5ypG5fwsV2EltLB5L2YyC5s2reiPt-8-7lCraZmRyHxCtEH9y_Vby4jeLFkHGt61d375lmSE7HZE3xwZU6Z2uNwlbAWltKx" alt="Brain Games for Creative Minds">
+                <div class="book-title">Brain Games for Creative Minds</div>
+            </a>
+             <a href="puzzles8.html" class="book-cover" style="background-color: #1f2937;">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTlXfnBXpKri7bwxZ51jCrm1URmT-i3EmmpteHBcO_Xgd2hF_KGMQnkNLFzQfRsdkFNLBQ9Co60cPafxGZkBidpldjkSCVh7j56J3Uv2mE6X7fLT3eh6zJu" alt="The Great Book of Puzzles and Teasers">
+                <div class="book-title">The Great Book of Puzzles and Teasers</div>
+            </a>
+            <a href="puzzles9.html" class="book-cover" style="background-color: #1f2937;">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQq6_LSrUtLp-7Zp-nTSNjxfWzcuGCKgysEk7wVFvj3MyRz-aFDAGeIvjUMUa73M7tjU-Ne-SgiatbkupYN9LlZ9Nn1wHV-IfvOnEdbqcA" alt="The Mindfulness Puzzle Book">
+                <div class="book-title">The Mindfulness Puzzle Book</div>
+            </a>
+            <a href="puzzles10.html" class="book-cover" style="background-color: #1f2937;">
+                <img src="https://m.media-amazon.com/images/I/71TpVz1TGXL.AC_UY327_FMwebp_QL65.jpg" alt="The Su Doku Challenge One">
+                <div class="book-title">The Su Doku Challenge One</div>
+            </a>
+            <a href="puzzles11.html" class="book-cover" style="background-color: #1f2937;">
+                <img src="https://m.media-amazon.com/images/I/71KFixyC9AL.AC_UY327_FMwebp_QL65.jpg" alt="Wordsearch Challenge 2">
+                <div class="book-title">Wordsearch Challenge 2</div>
+            </a>
+    </div>
+    
+    <script>
+        function navigateToPage(selectElement) {
+            const value = selectElement.value;
+            if (value) {
+                window.location.href = value;
+            }
+        }
+    </script>
+</body>
+</html>
